@@ -11,7 +11,7 @@ export class PersonelService {
   constructor(private http: HttpClient) { }
 
   getPersonelList():Observable<Personel[]> {
-    return this.http.get<Personel[]>('http://localhost:5200/personel/get');
+    return this.http.get<Personel[]>('http://localhost:5200/api/personel/get');
   }
 
 

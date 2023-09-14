@@ -14,9 +14,13 @@ export class PersonelListComponent implements OnInit {
 
   constructor(private personelService: PersonelService) { }
   ngOnInit(): void {
+
+    console.log("Adım 1");
     this.personelService.getPersonelList().subscribe(data => {
       this.personelList = data;
+      console.log("Adım 2");
     });
+    console.log("Adım 3");
   }
 
 }
