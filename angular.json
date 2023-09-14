@@ -26,6 +26,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -59,8 +61,6 @@
             }
           },
           "defaultConfiguration": "production"
-         
-
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -73,8 +73,8 @@
             }
           },
           "defaultConfiguration": "development",
-          "options":{
-            "port":4300
+          "options": {
+            "port": 4300
           }
         },
         "extract-i18n": {

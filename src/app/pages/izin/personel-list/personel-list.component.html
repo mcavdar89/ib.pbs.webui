@@ -1,3 +1,27 @@
-{{personelList | json}}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Soyad</th>
+            <th scope="col">Unvan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let  item of personelList; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.ad}}</td>
+            <td>{{item.soyad}}</td>
+            <td>{{item.unvanAd}}</td>
+            <td>
+                <button type="button" class="btn btn-info" (click)="setPersonelForm(item)">Düzenle</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
 
 
+<p-dialog header="Header" [(visible)]="formVisible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+    <ib-personel-form></ib-personel-form>
+</p-dialog>

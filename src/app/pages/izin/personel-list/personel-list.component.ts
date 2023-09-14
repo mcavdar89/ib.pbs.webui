@@ -10,7 +10,7 @@ import { PersonelService } from 'src/app/services/personel.service';
 })
 export class PersonelListComponent implements OnInit {
   personelList: Personel[] = [];
-
+  formVisible:boolean = false;
 
   constructor(private personelService: PersonelService) { }
   ngOnInit(): void {
@@ -22,5 +22,11 @@ export class PersonelListComponent implements OnInit {
     });
     console.log("Adım 3");
   }
+
+
+  setPersonelForm(item: Personel){
+    this.formVisible = true;
+  }
+
 
 }
