@@ -23,5 +23,5 @@
 
 
 <p-dialog header="Header" [(visible)]="formVisible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
-    <ib-personel-form></ib-personel-form>
+    <ib-personel-form *ngIf="personel" [data]="personel"></ib-personel-form>
 </p-dialog>

@@ -10,7 +10,10 @@ import { PersonelService } from 'src/app/services/personel.service';
 })
 export class PersonelListComponent implements OnInit {
   personelList: Personel[] = [];
-  formVisible:boolean = false;
+  formVisible: boolean = false;
+
+  personel?: Personel;
+
 
   constructor(private personelService: PersonelService) { }
   ngOnInit(): void {
@@ -24,8 +27,12 @@ export class PersonelListComponent implements OnInit {
   }
 
 
-  setPersonelForm(item: Personel){
-    this.formVisible = true;
+  setPersonelForm(item: Personel) {
+    this.personel = undefined;
+    setTimeout(() => {
+      this.personel = item;
+      this.formVisible = true;
+    }, 100);
   }
 
 

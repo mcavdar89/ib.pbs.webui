@@ -5,6 +5,7 @@ import { IzinRoutingModule } from './izin-routing.module';
 import { PersonelListComponent } from './personel-list/personel-list.component';
 import { DialogModule } from 'primeng/dialog';
 import { PersonelFormComponent } from './personel-form/personel-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,8 @@ import { PersonelFormComponent } from './personel-form/personel-form.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+
     IzinRoutingModule,
     DialogModule
   ]

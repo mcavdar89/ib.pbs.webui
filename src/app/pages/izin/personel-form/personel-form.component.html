@@ -1,1 +1,22 @@
-<p>personel-form works!</p>
+<form #frm="ngForm" (ngSubmit)="kaydet(frm.value)">
+    <div >
+        <label for="ad">Ad</label>
+        <input name="ad" required ngModel type="text" class="form-control">
+        
+        <div class="alert alert-danger" role="alert"
+         *ngIf="frm.controls['ad']?.status != 'VALID' && (frm.controls['ad']?.touched  || isFormSubmitted)"
+        >
+            This is a danger alert—check it out!
+        </div>
+    </div>
+    <div >
+        <label for="ad">Soyad</label>
+        <input name="soyad" ngModel type="text" class="form-control">
+    </div>
+    <div >
+        <label for="unvanId">Ünvan Id</label>
+        <input name="unvanId" ngModel type="text" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
