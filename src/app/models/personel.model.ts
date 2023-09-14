@@ -1,4 +1,4 @@
-export class Perosnel{
+export class Personel{
     id?: number;
     unvanId?: number;
     unvanAd?: string;
