@@ -1,0 +1,23 @@
+<p>{{formName}}</p>
+<form [formGroup]="frm" (ngSubmit)="kaydet()">
+    <div >
+        <label for="ad">Ad</label>
+        <input formControlName="ad" type="text" class="form-control">
+        
+        <!-- <div class="alert alert-danger" role="alert"
+         *ngIf="frm.controls['ad']?.status != 'VALID' && (frm.controls['ad']?.touched  || isFormSubmitted)"
+        >
+            This is a danger alert—check it out!
+        </div> -->
+    </div>
+    <div >
+        <label for="ad">Soyad</label>
+        <input formControlName="soyad" type="text" class="form-control">
+    </div>
+    <div >
+        <label for="unvanId">Ünvan Id</label>
+        <input formControlName="unvanId" type="text" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

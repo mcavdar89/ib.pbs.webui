@@ -5,19 +5,22 @@ import { IzinRoutingModule } from './izin-routing.module';
 import { PersonelListComponent } from './personel-list/personel-list.component';
 import { DialogModule } from 'primeng/dialog';
 import { PersonelFormComponent } from './personel-form/personel-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PersonelForm2Component } from './personel-form2/personel-form2.component';
 
 @NgModule({
   declarations: [
     PersonelListComponent,
-    PersonelFormComponent
+    PersonelFormComponent,
+    PersonelForm2Component
   ],
   imports: [
     CommonModule,
     FormsModule,
 
     IzinRoutingModule,
-    DialogModule
+    DialogModule,
+    ReactiveFormsModule
   ]
 })
 export class IzinModule { }

@@ -12,6 +12,9 @@ export class PersonelListComponent implements OnInit {
   personelList: Personel[] = [];
   formVisible: boolean = false;
 
+  formAdi: string = "personel-form2";
+
+
   personel?: Personel;
 
 
