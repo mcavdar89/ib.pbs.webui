@@ -37,6 +37,14 @@ export class PersonelListComponent implements OnInit {
       this.formVisible = true;
     }, 100);
   }
+  setList(item: Personel) {
+    let index = this.personelList.findIndex(x => x.id == item.id);
+    if (index > -1) {
+      this.personelList[index] = item;
+    }else{
+      this.personelList.push(item);
+    }
 
+  }
 
 }

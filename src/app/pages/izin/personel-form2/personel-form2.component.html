@@ -1,14 +1,16 @@
 <p>{{formName}}</p>
+<p-toast></p-toast>
 <form [formGroup]="frm" (ngSubmit)="kaydet()">
+   
     <div >
         <label for="ad">Ad</label>
         <input formControlName="ad" type="text" class="form-control">
         
-        <!-- <div class="alert alert-danger" role="alert"
+        <div class="alert alert-danger" role="alert"
          *ngIf="frm.controls['ad']?.status != 'VALID' && (frm.controls['ad']?.touched  || isFormSubmitted)"
         >
             This is a danger alert—check it out!
-        </div> -->
+        </div>
     </div>
     <div >
         <label for="ad">Soyad</label>

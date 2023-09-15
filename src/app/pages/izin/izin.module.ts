@@ -7,7 +7,8 @@ import { DialogModule } from 'primeng/dialog';
 import { PersonelFormComponent } from './personel-form/personel-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PersonelForm2Component } from './personel-form2/personel-form2.component';
-
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 @NgModule({
   declarations: [
     PersonelListComponent,
@@ -20,7 +21,9 @@ import { PersonelForm2Component } from './personel-form2/personel-form2.componen
 
     IzinRoutingModule,
     DialogModule,
+    ToastModule,
     ReactiveFormsModule
-  ]
+  ],
+  providers: [MessageService]
 })
 export class IzinModule { }

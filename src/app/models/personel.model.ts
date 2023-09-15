@@ -4,5 +4,5 @@ export class Personel{
     unvanAd?: string;
     ad?: string;
     soyad?: string;
-    telefon?: string;
+    tel?: string;
 }
