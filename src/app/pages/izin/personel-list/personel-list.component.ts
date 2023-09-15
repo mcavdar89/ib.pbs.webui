@@ -11,7 +11,7 @@ import { PersonelService } from 'src/app/services/personel.service';
 export class PersonelListComponent implements OnInit {
   personelList: Personel[] = [];
   formVisible: boolean = false;
-
+  renk: string = "red";
   formAdi: string = "personel-form2";
 
 
@@ -41,10 +41,16 @@ export class PersonelListComponent implements OnInit {
     let index = this.personelList.findIndex(x => x.id == item.id);
     if (index > -1) {
       this.personelList[index] = item;
-    }else{
+    } else {
       this.personelList.push(item);
     }
 
   }
+
+  setTelRenk(){
+    this.renk = "blue";
+  }
+
+
 
 }

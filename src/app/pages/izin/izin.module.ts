@@ -9,11 +9,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PersonelForm2Component } from './personel-form2/personel-form2.component';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { TelformatPipe } from 'src/app/pipes/telformat.pipe';
+import { ColorDirective } from 'src/app/directives/color.directive';
+import { SharedModule } from 'src/app/shared.module';
 @NgModule({
   declarations: [
     PersonelListComponent,
     PersonelFormComponent,
-    PersonelForm2Component
+    PersonelForm2Component,
   ],
   imports: [
     CommonModule,
@@ -22,7 +25,8 @@ import { MessageService } from 'primeng/api';
     IzinRoutingModule,
     DialogModule,
     ToastModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [MessageService]
 })

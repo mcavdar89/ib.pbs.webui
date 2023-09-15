@@ -14,7 +14,8 @@ import { ToastModule } from 'primeng/toast';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    ToastModule
+    ToastModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

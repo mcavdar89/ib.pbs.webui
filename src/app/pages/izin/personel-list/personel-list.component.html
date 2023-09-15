@@ -1,3 +1,6 @@
+
+<button type="button" class="btn btn-info" (click)="setTelRenk()">Renk Değiştir</button>
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -13,7 +16,7 @@
             <td>{{item.ad}}</td>
             <td>{{item.soyad}}</td>
             <td>{{item.unvanAd}}</td>
-            <td>{{item.tel}}</td>
+            <td [color]="renk">{{item.tel | telformat}}</td>
             <td>
                 <button type="button" class="btn btn-info" (click)="setPersonelForm(item)">Düzenle</button>
             </td>
